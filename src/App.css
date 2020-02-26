@@ -2,37 +2,135 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+button,
+input {
+  font-family: "Playfair Display";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  width: 90%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin: 6rem auto;
+  outline: 1px dotted grey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  color: white;
+  text-shadow: 2px 2px black;
+  padding: 0.3rem 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.form {
+  width: 100%;
+  display: grid;
+}
+
+.form input {
+  width: 100%;
+  margin: 0.3rem auto;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: none;
+}
+
+.form input::placeholder {
+  text-align: center;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.buttons {
+  margin: 5rem auto;
+}
+
+.buttons button {
+  width: 100%;
+  border: 1px dotted grey;
+  text-transform: uppercase;
+  padding: 0.2rem 0.3rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  transition: all 2s ease;
+  margin: 0 auto;
+}
+
+.buttons button:hover {
+  transform: scaleX(1.2);
+}
+
+.task-btn {
+  margin: 0.8rem auto;
+  padding: 0.1rem 0.5rem;
+  opacity: 0.8;
+}
+
+.task-btn button {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: none;
+  border: 4px double black;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 2.5s ease;
+}
+
+.task-btn button:hover {
+  transform: scaleX(0.8);
+}
+
+.task-list {
+  background: rgba(0, 0, 0, 0.2);
+  margin: 0.5rem auto;
+  display: flex;
+  padding: 1rem 5rem;
+}
+
+.list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  list-style-type: none;
+  width: 100%;
+}
+
+.list li {
+  margin: 0.5rem auto;
   color: white;
+  text-transform: capitalize;
+  letter-spacing: 4px;
+  text-shadow: 1px 1px black;
+  transform: translateX(-1rem);
+  transition: all 0.5s ease-in;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.list li:hover {
+  opacity: 0.7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.no-task {
+  display: flex;
+  margin: 0.8rem auto;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  border: 1px dotted grey;
+  padding: 0.2rem 1rem;
+  color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.9);
+  font-size: 1.2rem;
+  font-weight: 500;
 }
